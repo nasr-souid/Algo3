@@ -4,8 +4,8 @@ VAR
     ps,i,j:INTEGER;
 BEGIN
 REPEAT 
-    FOR i FROM 0 TO v1.length DO
-    FOR j FROM 0 TO v2.length DO
+    FOR i FROM 0 TO v1.length -1 DO
+    FOR j FROM 0 TO v2.length-1 DO
         ps:=v1[i]*v2[j];
     END_FOR
     END_FOR
@@ -26,8 +26,8 @@ VAR
     ps,i,j:INTEGER;
 BEGIN
 REPEAT 
-    FOR i FROM 0 TO v1.length DO
-    FOR j FROM 0 TO v2.length DO
+    FOR i FROM 0 TO v1.length-1 DO
+    FOR j FROM 0 TO v2.length-1 DO
         ps:=v1[i]*v2[j];
     END_FOR
     END_FOR
