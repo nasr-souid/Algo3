@@ -1,0 +1,36 @@
+//*********************PROCEDURE dot_product*******************
+PROCEDURE dot_product(var v1,v2:Array of INTEGER)
+VAR
+    ps,i,j:INTEGER;
+BEGIN
+REPEAT 
+    FOR i FROM 0 TO v1.length DO
+    FOR j FROM 0 TO v2.length DO
+        ps:=v1[i]*v2[j];
+    END_FOR
+    END_FOR
+until(v1.length!=v2.length)
+END
+//****************Algorithme orthogonal************************
+ALGORITHM orthogonal
+var 
+    v1,v2:Array;
+BEGIN
+IF(dot_product(v1,v2)===0) THEN
+    Write("v1 and v2 are orthogonal");
+END_IF
+END
+////*********************function dot_product*******************
+FUNCTION dot_product(var v1,v2:Array of INTEGER)
+VAR
+    ps,i,j:INTEGER;
+BEGIN
+REPEAT 
+    FOR i FROM 0 TO v1.length DO
+    FOR j FROM 0 TO v2.length DO
+        ps:=v1[i]*v2[j];
+    END_FOR
+    END_FOR
+until(v1.length!=v2.length)
+RETURN(ps);
+END
